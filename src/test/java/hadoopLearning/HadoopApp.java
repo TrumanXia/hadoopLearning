@@ -102,8 +102,8 @@ public class HadoopApp
         // fileSystem.copyToLocalFile(new Path("/xyg/ship.ev"), new
         // Path("G:\\Temp\\ship.ev"));
 //        fileSystem.copyToLocalFile(null, null);
-        FSDataInputStream in = fileSystem.open(new Path("/access/input/access.log"));
-        BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(new File("access/input/access.log")));
+        FSDataInputStream in = fileSystem.open(new Path("/data/trackinfo_20130721.data"));
+        BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(new File("data/input/trackinfo_20130721.data")));
         IOUtils.copyBytes(in, out, 1024);
         out.flush();
     }

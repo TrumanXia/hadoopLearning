@@ -22,7 +22,7 @@ public class AccessApp
          
          Job job = Job.getInstance(configuration);
 //         Job job = Job.getInstance();
-         
+         job.setJarByClass(AccessApp.class);
          job.setMapperClass(AccessMapper.class);
          job.setReducerClass(AccessReducer.class);
          job.setPartitionerClass(AccessPartitioner.class);
